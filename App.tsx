@@ -10,7 +10,7 @@ export default function App() {
   const MyComponent = () => (
     <Appbar.Header>
       <Appbar.BackAction onPress={() => {}} />
-      <Appbar.Content title="Title" />
+      <Appbar.Content title="Teste" />
       <Appbar.Action icon="calendar" onPress={() => {}} />
       <Appbar.Action icon="magnify" onPress={() => {}} />
     </Appbar.Header>
