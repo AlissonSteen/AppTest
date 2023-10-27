@@ -7,12 +7,14 @@ export default function App() {
     <SafeAreaView style={styles.form}>
       <Text style={styles.heading}>Login</Text>
 
-      <TextInput style={styles.input} placeholder='E-Mail'></TextInput>
-      <TextInput style={styles.input} placeholder='Senha'></TextInput>
+      <TextInput keyboardType='email-address' inputMode='email' autoComplete='email' style={styles.input} placeholder='E-Mail'></TextInput>
+      <TextInput secureTextEntry={true} style={styles.input} placeholder='Senha'></TextInput>
 
       <Pressable style={styles.button}>
-        <Text style={styles.button.innerText}>Oi</Text>
+        <Text style={styles.innerText}>Entrar</Text>
       </Pressable>
+
+      <Text>Não possui uma conta? <Text style={styles.redirect}>Cadastre-se</Text></Text>
     </SafeAreaView>
   )
 }
@@ -46,9 +48,15 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    innerText: {
-      color: '#ffffff'
-    }
+    borderRadius: 10
+  },
+  innerText: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontWeight: '700'
+  },
+  redirect: {
+    fontWeight: 'bold'
   }
 })
 
